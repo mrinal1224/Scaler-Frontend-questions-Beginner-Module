@@ -1,0 +1,76 @@
+
+<!-- Assignment Question:
+
+You are given a web page design that needs to be implemented using CSS Grid. The design contains a header, a navigation menu, a main content area, and a footer.
+
+Problem Description:
+
+Implement the given design using CSS Grid. 
+The header should take up the entire width of the page and have a height of 80 pixels. 
+The navigation menu should be placed below the header and take up 20% of the page's width. 
+The main content area should take up the remaining width and be divided into three columns of equal width. The footer should be placed at the bottom of the page and take up the entire width of the page with a height of 50 pixels.
+
+Hints:
+
+Use the grid-template-rows and grid-template-columns properties to set up the grid layout.
+Use grid-column and grid-row properties to position elements within the grid.
+Use grid-template-areas property to organize the layout.
+
+Solution Approach:
+
+Define the grid container with grid-template-rows and grid-template-columns properties.
+Use grid-template-areas to define the layout of the elements.
+Position the header, navigation, main content area, and footer using grid-column and grid-row properties. -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Grid Assignmnet Question</title>
+	<style>
+        /* Solution -> */
+		.grid-container {
+			display: grid;
+			grid-template-rows: 80px auto 50px;
+			grid-template-columns: 20% auto auto auto;
+			grid-template-areas:
+			  "header header header header"
+			  "nav content content content"
+			  "footer footer footer footer";
+			height: 100vh;
+		}
+		.header {
+			grid-area: header;
+			background-color: #f0f0f0;
+		}
+		.nav {
+			grid-area: nav;
+			background-color: #e0e0e0;
+		}
+		.content {
+			grid-area: content;
+			background-color: #d0d0d0;
+		}
+		.footer {
+			grid-area: footer;
+			background-color: #c0c0c0;
+		}
+
+        
+	</style>
+
+    <!-- BoilerPlate -->
+</head>
+<body>
+	<div class="grid-container">
+		<header class="header">Header</header>
+		<nav class="nav">Nav</nav>
+		<main class="content">Main Content</main>
+		<footer class="footer">Footer</footer>
+	</div>
+</body>
+</html>

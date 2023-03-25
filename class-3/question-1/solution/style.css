@@ -1,0 +1,20 @@
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+#special {
+    font-size: larger;
+}
+
+input[type="text"] {
+    border: 10px solid gray;
+}
+
+a:hover {
+    color: red;
+}

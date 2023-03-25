@@ -1,0 +1,98 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+header a,
+header h2,
+header h3 {
+    color: white;
+}
+
+header a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header h1,
+span,
+button {
+    color: #5DA9E9;
+}
+
+header,
+header button {
+    background-color: black;
+    border-color: #5DA9E9;
+    font-weight: 600;
+}
+
+header button:hover {
+    background-color: #5DA9E9;
+    color: black;
+    border-color: black;
+    cursor: pointer;
+}
+
+header img {
+    width: 30%;
+}
+
+section.about {
+    background-color: white;
+}
+
+section.about img {
+    width: 30%;
+}
+
+section.about a img {
+    width: 3em;
+}
+
+section.projects {
+    background-color: black;
+}
+
+.projects-head {
+    color: white;
+}
+
+section.projects div.card {
+    background-color: white;
+    width: 20%;
+}
+
+section.projects div.card img {
+    width: 3em;
+}
+
+section.projects div.card:hover {
+
+    background-color: #5DA9E9;
+}
+
+section.projects h2 {
+    color: #5DA9E9;
+}
+
+section.projects div.card:hover h2 {
+
+    color: white;
+}
+
+.contact-section {
+    background-color: white;
+}
+
+.contact-section * {
+    width: 100%;
+}
+
+.contact-section h1,
+.contact-section span {
+    color: #5DA9E9;
+}
+
+.contact-section #submit_button {
+    background-color: #5DA9E9;
+}

@@ -1,0 +1,23 @@
+h1 {
+    color: blue;
+}
+
+p {
+    background-color: rgb(255, 255, 0);
+}
+
+.highlight {
+    color: #ff0000;
+}
+
+#special {
+    background-color: hsl(120, 100%, 50%);
+}
+
+input[type="text"] {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+a:hover {
+    color: hsla(0, 100%, 50%, 0.8);
+}

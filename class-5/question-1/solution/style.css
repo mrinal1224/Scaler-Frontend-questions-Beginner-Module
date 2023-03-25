@@ -1,0 +1,39 @@
+/* complete solution */
+
+.container {
+    width: 100%;
+    height: 500px;
+    background-color: lightgray;
+    position: relative;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.absolute {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: lightblue;
+}
+
+.relative {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    background-color: lightgreen;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: lightcoral;
+}
+
+.static {
+    position: static;
+    background-color: lightyellow;
+}

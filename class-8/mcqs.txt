@@ -1,0 +1,57 @@
+1.Which of the following is a valid JavaScript data type?
+a) undefined
+b) NaN
+c) infinity
+d) All of the above
+Answer: a) undefined. Undefined is a data type in JavaScript which represents a value that is not assigned.
+
+2.Which of the following is the correct way to declare an array in JavaScript?
+a) let myArray = ["red", "green", "blue"];
+b) let myArray = {"red", "green", "blue"};
+c) let myArray = ("red", "green", "blue");
+d) let myArray = {"red":1, "green":2, "blue":3};
+Answer: a) let myArray = ["red", "green", "blue"];. In JavaScript, arrays are declared using square brackets [].
+
+3.What is the output of the following code?
+let myArray = ["apple", "banana", "cherry"];
+myArray.push("orange");
+console.log(myArray);
+a) ["apple", "banana", "cherry"]
+b) ["apple", "banana", "cherry", "orange"]
+c) ["orange", "apple", "banana", "cherry"]
+d) ["apple", "banana", "orange", "cherry"]
+Answer: d) ["apple", "banana", "orange", "cherry"]. The push() method adds an element to the end of an array. In this code, "orange" is pushed to the end of the array, so the output is ["apple", "banana", "orange", "cherry"].
+
+4.Which of the following is the correct way to declare an object in JavaScript?
+a) let myObj = {name: "John", age: 30};
+b) let myObj = ["John", 30];
+c) let myObj = "John", 30;
+d) let myObj = {"John", 30};
+Answer: a) let myObj = {name: "John", age: 30};. In JavaScript, objects are declared using curly braces {}.
+
+5.What is the output of the following code?
+let myObj = {name: "John", age: 30};
+console.log(myObj.name);
+a) John
+b) age
+c) 30
+d) undefined
+Answer: a) John. In JavaScript, you can access the value of a property of an object using the dot notation. In this code, myObj.name refers to the value of the name property of the myObj object, which is "John".
+
+6.Which of the following is a valid way to define a function in JavaScript?
+a) function myFunction() {console.log("Hello");}
+b) let myFunction = function() {console.log("Hello");}
+c) myFunction = () => {console.log("Hello");}
+d) All of the above
+Answer: d) All of the above. In JavaScript, functions can be defined using the function keyword, function expressions, or arrow functions.
+
+7.What is the output of the following code?
+function myFunction(x, y) {
+return x + y;
+}
+console.log(myFunction(3, 4));
+a) 3
+b) 4
+c) 7
+d) undefined
+Answer: c) 7. This code defines a function called myFunction that takes two parameters and returns their sum. When myFunction(3, 4) is called, it returns 7, which is then printed to the console.

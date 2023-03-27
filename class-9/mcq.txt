@@ -1,0 +1,48 @@
+1.What is the difference between let and const in JavaScript?
+a) There is no difference.
+b) Variables declared with let have block scope, while variables declared with const have function scope.
+c) Variables declared with const cannot be reassigned, while variables declared with let can be.
+d) Variables declared with let and const have the same scope and cannot be reassigned.
+Answer: c) Variables declared with const cannot be reassigned, while variables declared with let can be. Const variables are read-only and cannot be reassigned once they are declared.
+
+2.What is destructuring in JavaScript?
+a) A way to break down an array or object into individual variables.
+b) A way to convert a string to an array.
+c) A way to reverse the order of an array.
+d) A way to access a property of an object using dot notation.
+Answer: a) A way to break down an array or object into individual variables. Destructuring allows you to extract values from arrays or objects and assign them to individual variables.
+
+3.What is hoisting in JavaScript?
+a) A way to move all variable and function declarations to the top of their respective scopes.
+b) A way to delete variables and functions from memory.
+c) A way to stop code execution.
+d) A way to assign values to variables.
+Answer: a) A way to move all variable and function declarations to the top of their respective scopes. This means that variables and functions can be declared after they are used, because they are moved to the top of the scope during the hoisting process.
+
+4.What is the execution context in JavaScript?
+a) The environment in which JavaScript code is executed.
+b) The process of interpreting JavaScript code by the browser.
+c) The process of compiling JavaScript code into machine code.
+d) The process of optimizing JavaScript code for performance.
+Answer: a) The environment in which JavaScript code is executed. The execution context consists of the variables, functions, and other data that are available during the execution of JavaScript code.
+
+5.Which of the following is a primitive data type in JavaScript?
+a) Object
+b) Array
+c) Number
+d) Function
+Answer: c) Number. Primitive data types in JavaScript include number, string, boolean, null, and undefined.
+
+6.What is the difference between a primitive data type and a reference data type in JavaScript?
+a) There is no difference.
+b) Primitive data types are stored by value, while reference data types are stored by reference.
+c) Reference data types are stored by value, while primitive data types are stored by reference.
+d) Primitive data types and reference data types are stored in the same way.
+Answer: b) Primitive data types are stored by value, while reference data types are stored by reference. This means that when a variable containing a primitive data type is assigned to another variable, a copy of the value is created. When a variable containing a reference data type is assigned to another variable, the reference to the original value is copied.
+
+7. What is the Temporal Dead Zone (TDZ) in JavaScript?
+a) The period of time during which a variable is being hoisted.
+b) The period of time during which a variable is being assigned a value.
+c) The period of time during which a variable cannot be accessed due to being in an unitialized state.
+d) The period of time during which a variable cannot be accessed due to being out of scope.
+Answer: c) The period of time during which a variable cannot be accessed due to being in an unitialized state. This occurs when a variable is declared using let or const, but has not yet been assigned a value.

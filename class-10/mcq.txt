@@ -1,0 +1,48 @@
+1.What is functional programming in JavaScript?
+a) A way of programming where functions are treated as first-class citizens.
+b) A way of programming where only loops and conditionals are used.
+c) A way of programming where only object-oriented principles are used.
+d) A way of programming where functions are not used at all.
+Answer: a) A way of programming where functions are treated as first-class citizens. In functional programming, functions are treated as values that can be passed as arguments, returned as results, and stored in variables.
+
+2.What is a pure function in JavaScript?
+a) A function that has no return value.
+b) A function that modifies its arguments or external state.
+c) A function that has a return value and does not modify its arguments or external state.
+d) A function that has no arguments.
+Answer: c) A function that has a return value and does not modify its arguments or external state. A pure function always returns the same output for a given input, and does not have any side effects.
+
+3.What are side effects in JavaScript?
+a) Changes to external state caused by a function.
+b) Changes to the arguments passed to a function.
+c) Changes to the return value of a function.
+d) Changes to the execution context of a function.
+Answer: a) Changes to external state caused by a function. Side effects are any changes made to state outside of a function's local scope, such as modifying global variables or writing to the console.
+
+4.What is a higher-order function in JavaScript?
+a) A function that returns another function.
+b) A function that takes another function as an argument.
+c) A function that modifies the execution context of another function.
+d) A function that has no arguments.
+Answer: b) A function that takes another function as an argument. A higher-order function is a function that operates on other functions, either by taking them as arguments or by returning them as results.
+
+5.What is the map function in JavaScript?
+a) A function that filters an array based on a given condition.
+b) A function that reduces an array to a single value based on a given function.
+c) A function that applies a given function to each element of an array and returns a new array.
+d) A function that sorts an array in ascending order.
+Answer: c) A function that applies a given function to each element of an array and returns a new array. The map function creates a new array by applying a given function to each element of an existing array.
+
+6.What is the filter function in JavaScript?
+a) A function that applies a given function to each element of an array and returns a new array.
+b) A function that filters an array based on a given condition and returns a new array.
+c) A function that reduces an array to a single value based on a given function.
+d) A function that sorts an array in descending order.
+Answer: b) A function that filters an array based on a given condition and returns a new array. The filter function creates a new array containing only the elements of an existing array that pass a given test.
+
+7.What is the reduce function in JavaScript?
+a) A function that applies a given function to each element of an array and returns a new array.
+b) A function that filters an array based on a given condition and returns a new array.
+c) A function that reduces an array to a single value based on a given function.
+d) A function that sorts an array in ascending order.
+Answer: c) A function that reduces an array to a single value based on a given function. The reduce function applies a given function to each element of an array, accumulating a single value as it goes.

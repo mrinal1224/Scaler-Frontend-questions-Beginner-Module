@@ -35,9 +35,9 @@ function doubleAndSum(arr) {
   
 
 // Test Cases
-console.log(doubleAndSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // 110
-console.log(doubleAndSum([5, 10, 15, 20, 25])); // 120
-console.log(doubleAndSum([2, 4, 6, 8])); // 40
-console.log(doubleAndSum([1, 3, 5, 7, 9])); // 0
-console.log(doubleAndSum([])); // 0
+console.log(doubleAndSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // 90
+console.log(doubleAndSum([5, 10, 15, 20, 25])); // 150
+console.log(doubleAndSum([2, 4, 6, 8])); // 28
+console.log(doubleAndSum([1, 3, 5, 7, 9])); // 42
+console.log(doubleAndSum([0, 1])); // 0
 

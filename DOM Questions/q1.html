@@ -1,0 +1,75 @@
+<!-- 
+Problem Description: 
+Write a program in JS to do the below mentioned task:
+When the button is clicked, append a <div> element, containing inner text 'Hello', as Child for the <body> element.
+-->
+
+<!-- Hints:
+Use eventListener of 'click' on button.
+Utilise createElement to create a new <div> element
+Use innerText property to set text as 'Hello'
+Use querySelector and appendChild to add the <div> element to <body> -->
+
+<!-- Solution Approach:
+// this method is used to identify anbnd select the Element
+
+    let btn = document.querySelector("button");
+
+    btn.addEventListener("click", function () {
+        console.log("button clicked");
+        let divElem = document.createElement("div");
+        //create Element lets you Create a new Element in the DOM
+
+        divElem.innerText = "Hello";
+        // inner text is a property by which you can access and add or remove Text inisde an element
+
+        let bodyElem = document.querySelector("body");
+
+        bodyElem.appendChild(divElem);
+        // this method allows you to add new Children inside your selected element
+    });
+-->
+
+<!-- Test Cases:
+Verify that a new <div> is added to <body> when button is clicked.
+Verify that the inner text of the <div> is 'Hello' -->
+
+<!-- Boilerplate -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Say Hello</button>
+</body>
+
+</html>
+
+<!-- Complete Solution -->
+
+<script>
+    // this method is used to identify anbnd select the Element
+
+    let btn = document.querySelector("button");
+
+    btn.addEventListener("click", function () {
+        console.log("button clicked");
+        let divElem = document.createElement("div");
+        //create Element lets you Create a new Element in the DOM
+
+        divElem.innerText = "Hello";
+        // inner text is a property by which you can access and add or remove Text inisde an element
+
+        let bodyElem = document.querySelector("body");
+
+        bodyElem.appendChild(divElem);
+        // this method allows you to add new Children inside your selected element
+    });
+</script>

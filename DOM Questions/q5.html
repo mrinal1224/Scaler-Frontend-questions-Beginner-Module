@@ -1,0 +1,68 @@
+<!-- Problem Description :
+
+Write a JavaScript program to perform the following task:
+
+You are given an empty cell. 
+Whenever the mouse enters the cell, 
+a jail should be drawn over it.
+And it should be removed once it leaves.
+
+NOTE : 
+Here cursor is reffered as the mouse and the box as the empty cell.
+To draw the jail: 
+Use the background-image provided and set it as background for the cell when the mouse enters the cell.
+
+-->
+
+<!-- Hints:
+Add eventListener of 'mouseover' on the cell to draw the jail.
+Use style->background property to set the background image (draw jail).
+Add eventListener of 'mouseout' on the cell to remove the jail.
+Use style->background property to set the background as 'none' (remove jail). -->
+
+<!-- Test Case :
+1. Verify that the jail is drawn when the mouse hovers over the cell.
+2. Verify that the jail is removed when the mouse exits the cell. -->
+
+
+<!-- Boilerplate : -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .cell {
+            border: 1px solid;
+            margin: auto;
+            margin-top: 10rem;
+            height: 20rem;
+            width: 20rem;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cell"></div>
+
+</body>
+
+</html>
+
+<!-- Complete Solution -->
+
+<script>
+    let cell = document.querySelector('.cell')
+
+    cell.addEventListener('mouseover', function () {
+        cell.style.background = 'url(./jail.jpg)'
+    })
+
+    cell.addEventListener('mouseout', function () {
+        cell.style.background = 'none'
+    })
+</script>

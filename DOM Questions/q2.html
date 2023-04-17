@@ -1,0 +1,65 @@
+<!-- Problem Description 
+Write a program in JavaScript to do the below mentioned task:
+
+Fix the list of elements by adding the missing element using DOM methods like querySelectorAll and insertBefore.
+-->
+
+<!-- Hints :
+Use querySelectorAll to get access to all <li> tags in an array
+Use the array of <li> to get access to target <li> elements
+Use createElement to create a <li> element
+Use insertBefore to add the element in the correct position
+ -->
+
+<!-- Test Cases :
+1. Verify that the missing <li> element has been added
+-->
+
+
+<!-- Boilerplate -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+</body>
+
+</html>
+
+<!-- Complete Solution -->
+
+
+<script>
+    // Fix the list by inserting the missing element using querySelectorAll and insertBefore
+
+    let list = document.querySelector("ul")
+
+    let allListItems = document.querySelectorAll('li')
+
+    let eightElem = allListItems[6]
+
+    let sevenElem = document.createElement('li')
+
+    sevenElem.innerText = '7'
+
+    list.insertBefore(sevenElem, eightElem)
+</script>

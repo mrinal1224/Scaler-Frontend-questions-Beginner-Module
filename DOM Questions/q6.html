@@ -1,0 +1,169 @@
+<!-- Problem Description :
+Write a script using JavaScript to make the filter work.
+
+The filter has 4 categories : none, Action, Romance, Comedy
+Each movie card is a div with an h3 and p element.
+The p element has a data-category attribute that hold the information about the category of the movie.
+Use the value of this data-category attribute to filter the movies based on the selected category from the drop down menu.
+
+NOTE:
+If the category is selected as 'none', show all the movies.
+To hide a movie card, change the style->display property of the div to 'none'.
+To show a movie card, change the style->display property of the div to 'block'.
+-->
+
+<!-- Hints:
+1. Add an eventListener of 'change' to the select element to access the filter category.
+2. Use querySelectorAll to get access to an array of all the p elements.
+3. Traverse through the array of p elements and based on the value of selected category, set the style->display property of parentElement. -->
+
+
+<!-- Test Cases :
+1. Verify that the 'none' filter is working.
+2. Verify that the 'Action' filter is working.
+3. Verify that the 'Romance' filter is working.
+4. Verify that the 'Comedy' filter is working.  -->
+
+
+<!-- Boilerplate : -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-top: 5rem;
+        }
+
+        .movies {
+            height: 10rem;
+            width: 10rem;
+            margin: 2rem;
+        }
+
+        .price {
+            background-color: rgb(247 84 33);
+            height: 8rem;
+            padding: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .heading {
+            background-color: rgba(0, 0, 0, 0.856);
+            height: 2rem;
+        }
+
+        .heading,
+        .price {
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+
+        select,
+        h1 {
+            position: fixed;
+        }
+
+        h1 {
+            top: 0px;
+        }
+
+        select {
+            width: 8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>BOOK MY SHOW</h1>
+    <select>
+        <option value="none">None</option>
+        <option value="action">Action</option>
+        <option value="romance">Romance</option>
+        <option value="comedy">Comedy</option>
+    </select>
+
+    <div class="movies">
+        <h3 class="heading">Example-1 action</h3>
+        <p class="price" data-category="action">Rs. 100</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-2 action</h3>
+        <p class="price" data-category="action">Rs 200</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-3 action</h3>
+        <p class="price" data-category="action">Rs. 150</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-4 romance</h3>
+        <p class="price" data-category="romance">Rs 200</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-5 romance</h3>
+        <p class="price" data-category="romance">Rs. 150</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-6 romance</h3>
+        <p class="price" data-category="romance">Rs. 150</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-7 action</h3>
+        <p class="price" data-category="action">Rs 200</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-8 comedy</h3>
+        <p class="price" data-category="comedy">Rs. 100</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-9 romance</h3>
+        <p class="price" data-category="romance">Rs. 100</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Example-10 comedy</h3>
+        <p class="price" data-category="comedy">Rs 200</p>
+    </div>
+
+</body>
+
+</html>
+
+<!-- Complete Solution : -->
+<script>
+    let filter = document.querySelector('select')
+
+
+    filter.addEventListener('change', function () {
+        let filterValue = filter.value
+
+
+        let allTickets = document.querySelectorAll('p')
+
+        if (filterValue === 'none') {
+            for (let i = 0; i < allTickets.length; i++) {
+                allTickets[i].parentElement.style.display = 'block'
+            }
+        } else {
+            for (let i = 0; i < allTickets.length; i++) {
+                if (allTickets[i].getAttribute('data-category') != filterValue) {
+                    allTickets[i].parentElement.style.display = 'none'
+                } else {
+                    allTickets[i].parentElement.style.display = 'block'
+                }
+            }
+        }
+    })
+</script>

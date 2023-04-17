@@ -1,0 +1,97 @@
+<!-- Problem Description :
+Write a JavaScript program to keep a check on the password being entered in the given input field.
+
+Make sure that it:
+1. Checks if the capslock is on or off
+    1.1 If its on, it should show "caps on" on the screen, and not allow to type.
+2. It should only allow to type when 'shift' key is pressed down.
+
+i.e., make sure the user can only type when 'shift' is pressed down along with capslock as off.
+
+NOTE :
+Set display property of p element containing "caps on" warning 
+as 'block' to show it, and as 'none' to hide it.
+Use event.preventDefault() on the keypress event to prevent the typing in the input field.
+-->
+
+<!-- Hints :
+Add an eventListener of 'keypress' to input field to check if the user can type or not. 
+Use event.getModifierState('capslock') to determine if capslock is 'on' or 'off'.
+Show the warning text of "caps on" based on the return value of the method above.
+Use event.preventDefault() to prohibit user from typing.
+Add eventListeners of 'keydown' and 'keyup' to the document to keep track of 'Shift' key being pressed or not. 
+Use a boolean flag for this purpose. -->
+
+<!-- Test Cases :
+1. Verify that warning text is displayed when capslock is on.
+2. Verify that the user can only type in when Shift key pressed and capslock is off.  -->
+
+<!-- Boilerplate : -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #pass {
+            display: block;
+            margin: auto;
+            margin-top: 10rem;
+            width: 25rem;
+            height: 3rem;
+        }
+
+        p {
+            text-align: center;
+            font-size: 3rem;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="pass" />
+    <p>Caps on!</p>
+
+</body>
+
+</html>
+
+<!-- Complete Solution : -->
+
+<script>
+    let inputField = document.querySelector('#pass')
+
+    let warningText = document.querySelector('p')
+
+    let isShift = false
+
+
+    inputField.addEventListener('keypress', function (e) {
+        if (e.getModifierState('CapsLock')) {
+            warningText.style.display = 'block'
+            e.preventDefault()
+        } else {
+            warningText.style.display = 'none'
+        }
+
+        if (!isShift) e.preventDefault()
+    })
+
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Shift') {
+            isShift = true
+        }
+    })
+
+    document.addEventListener('keyup', function (e) {
+        if (e.key === 'Shift') {
+            isShift = false
+        }
+    })
+</script>

@@ -1,0 +1,93 @@
+<!-- Problem Description :
+Write a script in JavaScript which 
+1. fetches the data-color attribute of the card on double clicking on them 
+2. and attaches the fetched value (a color) as a class to that card.
+3. Also changes the data-color attribute to "used".
+-->
+
+<!-- Hints : 
+Use querySelectorAll to get an array of card elements.
+Traverse through the array and add an evenListener of 'dblclick' on each of the card.
+Use getAttribute to fetch the color.
+Use setAttribute to change data-color attribute to 'used'.
+Access the classList and add the fetched color as a class using 'classList.add' -->
+
+<!-- Test Cases : 
+1. Verify that the color of the card changes when double clicked (class of desired color is added)
+2. Verify that the data-color attribute is set to 'used' after double clicking -->
+
+<!-- Boilerplate -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-top: 5rem;
+        }
+
+        .blue {
+            background-color: blue;
+            box-shadow: 0px 0px 6px 5px;
+        }
+
+        .green {
+            background-color: green;
+            box-shadow: 0px 0px 6px 5px;
+        }
+
+        .red {
+            background-color: red;
+            box-shadow: 0px 0px 6px 5px;
+        }
+
+        .card {
+            border: 1px solid;
+            height: 10rem;
+            width: 10rem;
+            margin: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card" data-color="blue"></div>
+    <div class="card" data-color="red"></div>
+    <div class="card" data-color="blue"></div>
+    <div class="card" data-color="red"></div>
+    <div class="card" data-color="red"></div>
+    <div class="card" data-color="blue"></div>
+    <div class="card" data-color="green"></div>
+    <div class="card" data-color="blue"></div>
+    <div class="card" data-color="green"></div>
+    <div class="card" data-color="blue"></div>
+
+</body>
+
+</html>
+
+<!-- Complete Solution : -->
+<script>
+    let cards = document.querySelectorAll('.card')
+
+
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener('dblclick', function (e) {
+            let classTobeAttached = e.currentTarget.getAttribute('data-color')
+            e.currentTarget.setAttribute('data-color', 'mrinal')
+            e.currentTarget.classList.add(classTobeAttached)
+        })
+    }
+</script>

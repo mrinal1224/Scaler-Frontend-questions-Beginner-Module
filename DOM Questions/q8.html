@@ -1,0 +1,62 @@
+<!-- Problem Description :
+
+A button of class '.double' exists inside the parent div of id '#doubleHolder' in the HTML. 
+Write a JavaScript program such that whenever the button is clicked :
+
+1. It is destroyed (removed from the parent div)
+2. Two new buttons are created in its place. (inside the same parent div)
+3. No changes should take place when the new buttons are clicked.
+-->
+
+<!-- Hints : 
+1. Add a 'click' eventListener to get the event when double button is clicked.
+2. Use createElement method to create the new buttons.
+3. Use appendChild method to add the buttons to the parent div.
+4. Use removeChild method to remove the double button from the parent div.
+ -->
+
+ <!-- Test Cases :
+1. Clicking on 'double button' destroys it (removes it from parent div).
+2. Two new buttons are created inside the parent div. -->
+
+<!-- Boilerplate -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="doubleHolder">
+        <button class="double">double</button>
+    </div>
+
+    <script>
+        // Write your JS program here =========
+    </script>
+</body>
+
+</html>
+<!-- Complete Solution -->
+<script>
+
+    document.querySelector('#doubleHolder').addEventListener('click', function (e) {
+        if (e.target.classList.contains('double')) {
+            let btn = document.createElement('button');
+            btn.setAttribute('class', 'newClass')
+            btn.innerHTML = 'firstButton'
+
+            let btn2 = document.createElement('button');
+            btn2.setAttribute('class', 'newClass')
+            btn2.innerHTML = 'SecondButton'
+
+            e.currentTarget.appendChild(btn)
+            e.currentTarget.appendChild(btn2)
+            e.currentTarget.removeChild(e.target)
+        }
+    })
+</script>

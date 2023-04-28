@@ -1,0 +1,64 @@
+<!-- Problem Description:
+Write a JavaScript program in the <script> tag to:
+
+Implement the locking mehcanism feature for all the tickets present. 
+
+The feature works under two different states of locked and unlocked.
+
+State 1. When the ticket is locked and clicked:
+
+1. locked icon changes to unlocked icon.
+2. task-area is set to editable.
+
+State 2. When the ticket is unlocked and clicked:
+
+1. unlocked icon changes to locked icon.
+2. task-area is set to uneditable.
+
+Important information and algorithms:
+
+1. How to change the icons, editability of task and keep an account of state?
+You are provided with two image icons: lock-icon.png and unlock-icon.png
+and the structure of the ticket is as follows:
+
+<div class="ticket-color ${ticketColor}"></div>
+<div class="ticket-id">${id}</div>
+<div class="task-area">${ticketTask}</div>
+<div class="ticket-lock">
+    <img src="lock-icon.png" alt="Lock Icon" height="20px" width="20px">
+</div>
+
+Based on these, below is the algorithm to be followed.
+
+Algorithm:
+You can to utilise the class of the parent div of img(icon) to find the current state, if its state 1 (locked) or state 2 (unlocked).
+Then whenever the icon is clicked:
+In state 1, you need to:
+1. change the class of 'ticket-lock' to 'ticket-unlock'
+2. change the src of img from 'lock-icon.png' to 'unlock-icon.png'
+3. set the contenteditable attribute of task-area to true
+
+In state 2, you need to:
+1. change the class of 'ticket-unlock' to 'ticket-lock'
+2. change the src of img from 'unlock-icon.png' to 'lock-icon.png'
+3. set the contenteditable attribute of task-area to false
+
+After performing the above steps, its also important to update the global ticketArr array with the new ticketTask. 
+
+Further, please focus on passing testcases to submit the problem successfully.
+-->
+
+<!-- Hints:
+1. Use document.querySelectorAll('.ticket-cont') to get access to all the tickets in the document and store them in an array.
+2. Traverse this array and add a 'click' eventListener to the icon of each of the ticket container element in the array.
+3. Get access to the: icon's parent div, icon's image and ticket's task-are using relevant selectors
+4. Utilise the class of the parent div of img(icon) to find the current state
+5. Use conditional statements (if-else) to write the algorithm based on states, which is mentioned in the description.
+-->
+
+<!-- Test cases:
+1. Verify that clicking on lock icon changes it to unlock icon.
+2. Verify that clicking on unlock icon changes it to lock icon.
+3. Verify that when the state is locked, the task is uneditable.
+4. Verify that when the state is unlocked, the task is editable.  -->
+

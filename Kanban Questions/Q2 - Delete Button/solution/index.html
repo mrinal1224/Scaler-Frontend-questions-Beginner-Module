@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Please NOTE that the link to assets (like images) need to be set in global context.
+For example:
+To access an image from assets folder correct way to set src attribute is 
+
+src = 'profile.png'
+
+instead of 
+
+src = './assets/profile.png'
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Management App</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <!-- TOOL BOX ELEMENTS -->
+    <div class="toolbox-cont">
+        <div class="toolbox-priority-cont">
+            <div class="lightpink color"></div>
+            <div class="lightgreen color"></div>
+            <div class="lightblue color"></div>
+            <div class="black color"></div>
+        </div>
+
+
+    </div>
+
+    <!-- MAIN CONTAINER - Tickets holder -->
+    <div class="main-cont">
+        <!-- <div class="ticket-color ${ticketColor}"></div>
+       <div class="ticket-id">${id}</div>
+       <div class="task-area">${ticketTask}</div>
+       <div class="ticket-lock">
+       <img src="lock-icon.png" alt="Lock Icon" height="20px" width="20px">
+      </div> -->
+    </div>
+    </div>
+
+    <!-- MODAL - Ticket generator window -->
+    <div class="modal-cont">
+
+        <textarea class="textArea-cont" placeholder="Enter Your Task" spellcheck="false">
+
+       </textarea>
+
+
+        <div class="priority-colors-container">
+            <div class="lightpink priority-color"></div>
+            <div class="lightgreen priority-color"></div>
+            <div class="lightblue priority-color"></div>
+            <div class="black priority-color active"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js">
+    </script>
+    <script>
+        // Write your solution here =====================================================
+
+        // FETCHING ALL THE TICKET CONTAINERS IN AN ARRAY
+        let ticketContArr = document.querySelectorAll('.ticket-cont');
+
+        // TRAVERSING THROUGH THAT ARRAY
+        for (let i = 0; i < ticketContArr.length; i++) {
+            // ADDING CLICK EVENTLISTENER TO THE ICON
+            ticketContArr[i].children[3].addEventListener('click', (e) => {
+                let ticket = ticketContArr[i];
+                let ticketTaskArea = ticket.querySelector('.task-area')
+                let iconDiv = ticketContArr[i].children[3];
+                let iconImage = iconDiv.querySelector('img');
+
+                // CHANGING THE ICON, CLASS AND SETTING TEXT-ARE AS EDITABLE
+                if (iconDiv.classList.contains('ticket-lock')) {
+                    iconImage.src = 'unlock-icon.png';
+                    iconDiv.classList.remove('ticket-lock');
+                    iconDiv.classList.add('ticket-unlock');
+                    ticketTaskArea.setAttribute("contenteditable", "true");
+
+                } else {
+                    iconImage.src = 'lock-icon.png';
+                    iconDiv.classList.remove('ticket-unlock');
+                    iconDiv.classList.add('ticket-lock');
+                    ticketTaskArea.setAttribute("contenteditable", "false");
+                }
+
+
+                // UPDATING MAIN TICKET ARRAY
+                let id = ticket.querySelector('.ticket-id').innerText;
+                let ticketIdx = getTicketIdx(id);
+                ticketsArr[ticketIdx].ticketTask = ticketTaskArea.innerText;
+
+            })
+        }
+
+        function getTicketIdx(id) {
+            let ticketIdx = ticketsArr.findIndex(function (ticketObj) {
+                return ticketObj.ticketID === id;
+            })
+
+            return ticketIdx;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

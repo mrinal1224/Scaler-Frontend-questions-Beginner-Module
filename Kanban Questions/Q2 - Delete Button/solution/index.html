@@ -45,7 +45,7 @@ src = './assets/profile.png'
        <div class="ticket-id">${id}</div>
        <div class="task-area">${ticketTask}</div>
        <div class="ticket-lock">
-       <img src="lock-icon.png" alt="Lock Icon" height="20px" width="20px">
+       <button>Locked</button>
       </div> -->
     </div>
     </div>
@@ -78,23 +78,23 @@ src = './assets/profile.png'
         // TRAVERSING THROUGH THAT ARRAY
         for (let i = 0; i < ticketContArr.length; i++) {
             // ADDING CLICK EVENTLISTENER TO THE ICON
-            ticketContArr[i].children[3].addEventListener('click', (e) => {
+            ticketContArr[i].querySelector('button').addEventListener('click', (e) => {
                 let ticket = ticketContArr[i];
                 let ticketTaskArea = ticket.querySelector('.task-area')
-                let iconDiv = ticketContArr[i].children[3];
-                let iconImage = iconDiv.querySelector('img');
+                let buttonDiv = ticketContArr[i].children[3];
+                let button = buttonDiv.querySelector('button');
 
                 // CHANGING THE ICON, CLASS AND SETTING TEXT-ARE AS EDITABLE
-                if (iconDiv.classList.contains('ticket-lock')) {
-                    iconImage.src = 'unlock-icon.png';
-                    iconDiv.classList.remove('ticket-lock');
-                    iconDiv.classList.add('ticket-unlock');
+                if (buttonDiv.classList.contains('ticket-lock')) {
+                    button.innerText = 'Unlocked';
+                    buttonDiv.classList.remove('ticket-lock');
+                    buttonDiv.classList.add('ticket-unlock');
                     ticketTaskArea.setAttribute("contenteditable", "true");
 
                 } else {
-                    iconImage.src = 'lock-icon.png';
-                    iconDiv.classList.remove('ticket-unlock');
-                    iconDiv.classList.add('ticket-lock');
+                    button.innerText = 'Locked';
+                    buttonDiv.classList.remove('ticket-unlock');
+                    buttonDiv.classList.add('ticket-lock');
                     ticketTaskArea.setAttribute("contenteditable", "false");
                 }
 

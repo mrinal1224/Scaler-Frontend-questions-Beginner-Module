@@ -1,3 +1,5 @@
+// WARNING: DO NOT EDIT THE BELOW CODE OR DATA
+
 // DUMMY DATA FOR THE COLORS
 let ticketsArr = [
   {
@@ -37,7 +39,7 @@ function createTicket(ticketTask, ticketColor, ticketID) {
        <div class="ticket-id">${id}</div>
        <div class="task-area">${ticketTask}</div>
        <div class="ticket-lock">
-       <img src="lock-icon.png" alt="Lock Icon" height="20px" width="20px">
+       <button>Locked</button>
       </div>`;
 
   let mainCont = document.querySelector(".main-cont");
@@ -47,6 +49,5 @@ function createTicket(ticketTask, ticketColor, ticketID) {
     ticketsArr.push({ ticketTask, ticketColor, ticketID: id });
     localStorage.setItem("tickets", JSON.stringify(ticketsArr));
   }
-
-  // console.log(ticketsArr);
 }
+

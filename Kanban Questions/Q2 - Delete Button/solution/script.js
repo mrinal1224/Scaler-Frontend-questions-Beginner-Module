@@ -39,7 +39,7 @@ function createTicket(ticketTask, ticketColor, ticketID) {
        <div class="ticket-id">${id}</div>
        <div class="task-area">${ticketTask}</div>
        <div class="ticket-lock">
-       <img src="lock-icon.png" alt="Lock Icon" height="20px" width="20px">
+       <button>Locked</button>
       </div>`;
 
   let mainCont = document.querySelector(".main-cont");

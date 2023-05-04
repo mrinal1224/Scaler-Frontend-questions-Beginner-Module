@@ -1,0 +1,33 @@
+<!-- Problem Description:
+
+Write a JS program to make the given OTP input work properly.
+
+In the Document, you have div#inputs that contains 4 input fields with 'input' class.
+Here is how these inputs should work:
+1. Each of the field only takes a single digit number as input.
+2. When a number is entered, the focus moves to the next input field.
+3. Pressing Backspace or Delete key removes the input of current field, and focus moves to the previous field.
+
+You can utilise methods like isNan(value), Element.focus(), Element.nextElementSibling and Element.previousElementSibling to make the above mentioned features work.
+
+Use the above information to write the entire JS program in the script.js file or script tag.
+Refer to the test cases to further understand the criterias to submit the problem successfully.
+
+NOTE:
+HTML and CSS are handled for you, please don't change the structure of the document.
+
+-->
+
+<!-- Hints:
+1. Add eventListener of 'input' on div#inputs to track the inputs being made to children feilds.
+2. In the call back of the above eventListener, utilise the event object to get the target Element.
+3. Make use of the methods like isNan(value), Element.focus(), Element.nextElementSibling and Element.previousElementSibling on the target Element.
+4. Add eventListener of 'keyup' to keep track of Backspace or Delete key being pressed.
+5. Use isNan(value) to check if the input being made is a valid number or not.   -->
+
+
+<!-- Test cases:
+1. Verify that the input fields only take a number as valid input.
+2. Verify that the focus movies to the next input field whenever a single digit is entered.
+3. Verify that when Backspace or Delete key is pressed, it removes the input from current field.
+4. Verify that when Backspace or Delete key is pressed, the focus gets back to previous field.   -->

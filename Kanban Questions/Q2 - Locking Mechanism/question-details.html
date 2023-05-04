@@ -1,0 +1,64 @@
+<!-- Problem Description:
+Write a JavaScript program in the <script> tag to:
+
+Implement the locking mehcanism feature for all the tickets present. 
+
+The feature works under two different states of locked and unlocked.
+
+State 1. When the ticket is locked and clicked:
+
+1. locked button changes to unlocked button.
+2. task-area is set to editable.
+
+State 2. When the ticket is unlocked and clicked:
+
+1. unlocked button changes to locked button.
+2. task-area is set to uneditable.
+
+Important information and algorithms:
+
+1. How to change the buttons, editability of task and keep an account of state?
+You are provided a single button inside the div.ticket-lock, 
+and the structure of the ticket is as follows:
+
+<div class="ticket-color ${ticketColor}"></div>
+<div class="ticket-id">${id}</div>
+<div class="task-area">${ticketTask}</div>
+<div class="ticket-lock">
+    <button>Locked</button>
+</div>
+
+Based on these, below is the algorithm to be followed.
+
+Algorithm:
+You can to utilise the class (will be ticket-lock or ticket-unlock) of the parent div of button to find the current state, if its state 1 (locked) or state 2 (unlocked).
+Then whenever the button is clicked:
+In state 1, you need to:
+1. change the class of 'ticket-lock' to 'ticket-unlock'
+2. change the innerText of button from 'Locked' to 'Unlocked'
+3. set the contenteditable attribute of task-area to true
+
+In state 2, you need to:
+1. change the class of 'ticket-unlock' to 'ticket-lock'
+2. change the innerText of button from 'Unlocked' to 'Locked'
+3. set the contenteditable attribute of task-area to false
+
+After performing the above steps, its also important to update the global ticketArr array with the new ticketTask. 
+
+Further, please focus on passing testcases to submit the problem successfully.
+-->
+
+<!-- Hints:
+1. Use document.querySelectorAll('.ticket-cont') to get access to all the tickets in the document and store them in an array.
+2. Traverse this array and add a 'click' eventListener to the button of each of the ticket container element in the array.
+3. Get access to the: button's parent div, button and ticket's task-are using relevant selectors
+4. Utilise the class of the parent div of button to find the current state
+5. Use conditional statements (if-else) to write the algorithm based on states, which is mentioned in the description.
+-->
+
+<!-- Test cases:
+1. Verify that clicking on lock button changes it to unlock button.
+2. Verify that clicking on unlock button changes it to lock button.
+3. Verify that when the state is locked, the task is uneditable.
+4. Verify that when the state is unlocked, the task is editable.  -->
+

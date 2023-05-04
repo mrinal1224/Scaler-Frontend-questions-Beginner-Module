@@ -1,3 +1,23 @@
+<!-- Problem Description:
+The given JS code is broken. This is because:
+Even when yellow box is clicked, it is alerted that red is clicked.
+
+Fix the code such that:
+1. It alerts as 'yellow is clicked' when yellow box is clicked.
+2. and alerts as 'red is clicked' when the red box is clicked.
+3. A single alert is generated when any of the box is clicked. -->
+
+<!-- Hints:
+1. Use 'click' eventListener to each of the boxes. (divs with 'red' and 'yellow' classes)
+2. Use window.alert('desired_msg') to generate an alert.
+3. To prevent red alert, utilise a boolean flag to keep account of when yellow box is clicked.  
+-->
+
+<!-- Test cases:
+1. Verify that the program alerts as 'yellow is clicked' when the yellow box is clicked.
+2. A single alert is generated when any of the box is clicked. -->
+
+<!-- Boilerplate -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +53,7 @@
         <div class="yellow"></div>
     </div>
 
-    <!-- <script>
+    <script>
         //Q The following code is broken. Even when clicked on yellow,
         //its alerted that red is clicked. Fix it
 
@@ -42,28 +62,30 @@
         red.addEventListener('click', (e) => {
             window.alert('red is clicked');
         })
-    </script> -->
-    <script>
-        
-        // FIXED CODE =====
-
-        let red = document.querySelector(".red");
-        let yellowWasClicked = false;
-
-        red.addEventListener('click', (e) => {
-            if (yellowWasClicked) {
-                yellowWasClicked = false;
-            } else {
-                window.alert('red is clicked');
-            }
-        })
-        let yellow = document.querySelector(".yellow");
-        yellow.addEventListener('click', (e) => {
-            yellowWasClicked = true;
-            window.alert('yellow is clicked');
-
-        })
     </script>
 </body>
 
 </html>
+
+<!-- Complete Solution -->
+
+<script>
+    // FIXED CODE =====
+
+    let redDiv = document.querySelector(".red");
+    let yellowWasClicked = false;
+
+    redDiv.addEventListener('click', (e) => {
+        if (yellowWasClicked) {
+            yellowWasClicked = false;
+        } else {
+            window.alert('red is clicked');
+        }
+    })
+    let yellowDiv = document.querySelector(".yellow");
+    yellowDiv.addEventListener('click', (e) => {
+        yellowWasClicked = true;
+        window.alert('yellow is clicked');
+
+    })
+</script>

@@ -86,7 +86,7 @@ Access the classList and add the fetched color as a class using 'classList.add' 
     for (let i = 0; i < cards.length; i++) {
         cards[i].addEventListener('dblclick', function (e) {
             let classTobeAttached = e.currentTarget.getAttribute('data-color')
-            e.currentTarget.setAttribute('data-color', 'mrinal')
+            e.currentTarget.setAttribute('data-color', 'used')
             e.currentTarget.classList.add(classTobeAttached)
         })
     }

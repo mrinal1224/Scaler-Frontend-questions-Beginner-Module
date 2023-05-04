@@ -1,0 +1,96 @@
+<!-- Problem Description:
+Write a JS program to display information of various products from a list. 
+Read the entire problem description carefully to understand the necessary details.
+
+You are provided with: (Don't make any changes to below mentioned files)
+1. index.html => containing basic document structure
+2. styles.css => contains styling
+3. and data.js => has a data variable that contains an Array of Objects with details of several products.
+
+As you can access the data array, your task is to
+write a program to make a product card for each of the product's object inside this array.
+
+Algorithm:
+1. Traverse through the data Array. 
+2. Individually accessing each product's Object.
+3. Inject relevant details like title, category, rating-count in the below mentioned HTML template to make a div.card.
+4. To make the rating stars:
+    4.1. Round off the rating.rate value of an object to nearest Integer
+    4.2. Use this value to determine the number of empty and filled stars out of 5. (Ex: For a rating of 3/5 => 3 filled stars and 2 empty stars)
+    4.3. Utilise these values in a loop to make filled and empty stars
+    4.4. To make filled star symbol use '&#9733;' and for empty star use '&#9734;' 
+    4.5. Wrap these stars inside a div as shown below.
+5. Finally, after the div.card is ready with all the details injected, add it to div#container 
+
+The HTML structure of a card is as follow:
+
+<div class="card">
+        <div class="details">
+            <span class="product__name">${product.title}</span>
+            <br>
+            <span class="product__category">${product.category}</span>
+            <div class="all__star">
+                    <span class="star__filled">&#9733;</span>
+                    <span class="star__filled">&#9733;</span>
+                    <span class="star__filled">&#9733;</span>
+                    <span class="star__filled">&#9733;</span>
+                    <span class="star__notfilled">&#9734;</span>
+            </div>
+            <div class="rating__count">Rating Count : <span>${product.rating.count}</span></div>
+        </div>
+        <div class="btn">
+            <button class="btn__buy">Buy Now</button>
+        </div>
+</div>
+
+and object inside the data array has the following structure:
+{
+    id: 1,
+    title: "Sample Product 1",
+    price: 109.95,
+    description:
+      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    category: "men's clothing",
+    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    rating: {
+      rate: 3.9,
+      count: 120,
+    },
+}
+
+Use the above information to write the entire JS program in the script.js file or script tag. (below the script tag loading data.js file)
+Refer to the test cases to further understand the criterias to submit the problem successfully.
+
+Feel free to access hints to get help/assistance.
+-->
+
+<!--  Hints:
+1. Traverse on the data array to access individual object.
+2. Use document.createElement('div') to create a div that will hold all the spans containing individual stars.
+3. Follow the step 4 of algorithm and utilise 2 loops to add spans containing filled and empty stars to the above div.
+4. `<div class="card">
+        <div class="details">
+            <span class="product__name">${product.title}</span>
+            <br>
+            <span class="product__category">${product.category}</span>
+            <div class="all__star">
+              ${allStarDiv.innerHTML}
+            </div>
+            <div class="rating__count">Rating Count : <span>${product.rating.count}</span></div>
+        </div>
+        <div class="btn">
+            <button class="btn__buy">Buy Now</button>
+        </div>
+    </div>`
+
+    Use this as the template and add the innerHTML of your stars div to the div.all__star as mentioned above.
+5. Utilise template literal as mentioned above to inject the values inside the HTML template.
+6. Finally, when done use document.getElementById('container').innerHTML += `THE ABOVE TEMPLATE` to add the card to the document inside div#container.
+-->
+
+<!-- Test cases:
+1. Verify that a total of 20 product cards (div.card) are present in the Document.
+2. Verify that a card holds a valid title.
+3. Verify that a card holds a valid category.
+4. Verify that a card holds a valid rating count.
+5. Verify that a card contains correct star rating. (number of empty and filled stars) -->

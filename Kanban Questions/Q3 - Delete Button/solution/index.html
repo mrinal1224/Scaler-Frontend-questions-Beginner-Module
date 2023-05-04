@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Please NOTE that the link to assets (like images) need to be set in global context.
+For example:
+To access an image from assets folder correct way to set src attribute is 
+
+src = 'profile.png'
+
+instead of 
+
+src = './assets/profile.png'
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Management App</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- TOOL BOX ELEMENTS -->
+    <div class="toolbox-cont">
+        <div class="toolbox-priority-cont">
+            <div class="lightpink color"></div>
+            <div class="lightgreen color"></div>
+            <div class="lightblue color"></div>
+            <div class="black color"></div>
+        </div>
+
+        <div class="action-btn-cont">
+            <div class="remove-btn">
+                <img src="cross-logo.png" alt="cross-logo" height="50%">
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTAINER - Tickets holder -->
+    <div class="main-cont">
+        <!-- <div class="ticket-color ${ticketColor}"></div>
+       <div class="ticket-id">${id}</div>
+       <div class="task-area">${ticketTask}</div> -->
+    </div>
+    </div>
+
+
+
+    <script src="script.js">
+    </script>
+    <script>
+        // Write your solution here =====================================================
+
+        // FETCHING ALL THE TICKET CONTAINERS IN AN ARRAY
+        let ticketContArr = document.querySelectorAll('.ticket-cont');
+        let removeBtn = document.querySelector('.remove-btn');
+
+        let removeFlag = false;
+
+        // REMOVE BUTTON HANDLES removeFlag and creates ALERT
+        removeBtn.addEventListener("click", function () {
+            removeFlag = !removeFlag;
+
+            if (removeFlag === true) {
+                alert("delete button has been activated");
+                removeBtn.style.backgroundColor = "red";
+            } else {
+                removeBtn.style.backgroundColor = "inherit";
+            }
+        });
+
+
+        // TRAVERSING THROUGH THAT ARRAY
+        for (let i = 0; i < ticketContArr.length; i++) {
+            // ADDING CLICK EVENTLISTENER TO THE ICON
+            ticketContArr[i].addEventListener('click', (e) => {
+                if (!removeFlag) return;
+
+                let idx = getTicketIdx(ticketContArr[i].querySelector('.ticket-id').innerText);
+
+                let deletedElement = ticketsArr.splice(idx, 1);
+
+                console.log(deletedElement)
+
+                ticketContArr[i].remove(); // ui Removal
+
+            })
+        }
+
+        // A FUNCTION TO GET THE TICKET INDEX FROM MAIN DATA ARRAY
+        function getTicketIdx(id) {
+            let ticketIdx = ticketsArr.findIndex(function (ticketObj) {
+                return ticketObj.ticketID === id;
+            })
+
+            return ticketIdx;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+Question: What is encapsulation in JavaScript?
+
+a) The process of hiding the implementation details and providing an interface for accessing data and methods.
+b) The process of converting objects into a string representation.
+c) The process of creating multiple instances of an object.
+d) The process of inheriting properties and methods from a parent object.
+
+Answer: a) The process of hiding the implementation details and providing an interface for accessing data and methods.
+
+Explanation: Encapsulation in JavaScript is the practice of bundling data and methods together and hiding the internal implementation details from the outside world. It allows for data abstraction and provides an interface for accessing and manipulating the data.
+
+Question: What is prototypal inheritance in JavaScript?
+
+a) The process of creating multiple instances of an object.
+b) The process of copying properties from one object to another.
+c) The process of inheriting properties and methods from a parent object.
+d) The process of converting objects into a string representation.
+
+Answer: c) The process of inheriting properties and methods from a parent object.
+
+Explanation: Prototypal inheritance is a feature of JavaScript that allows objects to inherit properties and methods from a parent object. In JavaScript, every object has an internal property called a prototype, which can be used to access and inherit properties and methods from another object.
+
+Question: What is the keyword used to create a new instance of an object in JavaScript?
+
+a) this
+b) super
+c) new
+d) instanceof
+
+Answer: c) new
+
+Explanation: The new keyword is used in JavaScript to create a new instance of an object based on a constructor function. It allocates memory for the object, sets up the prototype chain, and calls the constructor function to initialize the object.
+
+Question: Which keyword is used to refer to the current object within a class method in JavaScript?
+
+a) that
+b) self
+c) this
+d) current
+
+Answer: c) this
+
+Explanation: The this keyword is used to refer to the current object within a class method in JavaScript. It allows accessing properties and methods of the object on which the method was called.
+
+Question: What is the purpose of the extends keyword in JavaScript?
+
+a) To create a new instance of an object.
+b) To inherit properties and methods from a parent class.
+c) To convert objects into a string representation.
+d) To copy properties from one object to another.
+
+Answer: b) To inherit properties and methods from a parent class.
+
+Explanation: The extends keyword is used in JavaScript classes to inherit properties and methods from a parent class. It establishes a class hierarchy and allows for code reuse through inheritance.
+
+Question: What is the difference between a class and an object in JavaScript?
+
+a) A class is a blueprint for creating objects, while an object is an instance of a class.
+b) A class is an instance of an object, while an object is a blueprint for creating classes.
+c) There is no difference; the terms can be used interchangeably.
+d) A class and an object are two different names for the same concept in JavaScript.
+
+Answer: a) A class is a blueprint for creating objects, while an object is an instance of a class.
+
+Explanation: In JavaScript, a class is a template or blueprint that defines the structure and behavior of an object. An object, on the other hand, is an instance or a specific realization of a class. Multiple objects can be created based on the same class, each with its own set of data.
+
+Question: Which keyword is used to define a method in a JavaScript class?
+
+a) method
+b) function
+c) this
+d) class
+
+Answer: b) function
+
+Explanation: A method in a JavaScript class is defined using the function keyword. The function represents the behavior or actions that the object can perform.
+
+Question: What is the purpose of the super keyword in JavaScript?
+
+a) To create a new instance of an object.
+b) To refer to the current object within a class method.
+c) To inherit properties and methods from a parent class.
+d) To convert objects into a string representation.
+
+Answer: c) To inherit properties and methods from a parent class.
+
+Explanation: The super keyword is used in JavaScript to access and call functions on an object's parent or superclass. It is typically used within a subclass to invoke the constructor or methods of the parent class.
+
+Question: Which keyword is used to define a class in JavaScript?
+
+a) class
+b) object
+c) constructor
+d) prototype
+
+Answer: a) class
+
+Explanation: The class keyword is used to define a class in JavaScript. It is followed by the class name and the class body, which contains the properties and methods of the class.
+
+Question: What is the purpose of the constructor method in a JavaScript class?
+
+a) To create a new instance of an object.
+b) To convert objects into a string representation.
+c) To inherit properties and methods from a parent class.
+d) To initialize the object's properties and perform setup tasks.
+
+Answer: d) To initialize the object's properties and perform setup tasks.
+
+Explanation: The constructor method is a special method within a JavaScript class that is automatically called when a new instance of the class is created using the new keyword. It is used to initialize the object's properties and perform any necessary setup tasks.
+
+Question: Which keyword is used to access the prototype of an object in JavaScript?
+
+a) proto
+b) prototype
+c) inherit
+d) object
+
+Answer: a) proto
+
+Explanation: The proto keyword is used to access the prototype of an object in JavaScript. It provides a way to access and modify the prototype object directly.
+
+Question: What is the purpose of the instanceof operator in JavaScript?
+
+a) To create a new instance of an object.
+b) To convert objects into a string representation.
+c) To check if an object belongs to a specific class.
+d) To inherit properties and methods from a parent class.
+
+Answer: c) To check if an object belongs to a specific class.
+
+Explanation: The instanceof operator is used in JavaScript to check if an object is an instance of a specific class. It returns true if the object is an instance of the specified class, and false otherwise.

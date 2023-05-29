@@ -100,10 +100,10 @@ function fetchData() {
 // c) Data
 // d) End
 
-// Correct Answer: b) Data
-// End
+// Correct Answer: b) End
+// Data
 
-// Explanation: The logData function is an async function that awaits the result of the fetchData function. It logs the resolved data ('Data') after 1 second. Then, 'End' is logged immediately after the logData function call.
+// Explanation: The logData function is an async function that awaits the result of the fetchData function. It logs the resolved data ('Data') after 1 second. Till then, 'End' is logged immediately after the logData function call.
   
 
 

@@ -221,10 +221,10 @@ function fetchData() {
 // d) Error
 // End
 
-// Correct Answer: a) Error
-// End
+// Correct Answer: a) End
+// Error
 
-// Explanation: The fetchData function returns a promise that is intentionally rejected after 1 second. Inside the logData async function, the promise is awaited within a try...catch block. As the promise is rejected, the catch block is executed and logs 'Error'. 'End' is logged afterward.
+// Explanation: The fetchData function returns a promise that is intentionally rejected after 1 second, till then 'End' is logged. Inside the logData async function, the promise is awaited within a try...catch block. As the promise is rejected, the catch block is executed and logs 'Error'.
   
   
 

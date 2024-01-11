@@ -12,7 +12,7 @@
 // Which of the following is a functional component in React?
 // a) class MyComponent extends React.Component
 // b) const MyComponent = () => {...}
-// c) function MyComponent() {...}
+// c) function MyComponent = () => {...}
 // d) render() {...}
 // [ANS] b) const MyComponent = () => {...}
 
